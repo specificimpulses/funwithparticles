@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World!</string>
+	<string name="app_name">ParticleWallpaper</string>
+	<string name="service_label">GL Wallpaper Test Project</string>
+	<string name="description">An OpenGL live wallpaper</string>
+	
+	<string name="particlewallpaper_label">Fun With Particles</string>
+	<string name="particlewallpaper_description">Have fun with particles!</string>
+
+	<string name="settings_title">Particle Wallpaper Settings</string>
+	<string-array name="nparticles">
+		<item name="100 particles">100</item>
+		<item name="200 particles">200</item>
+		<item name="400 particles">400</item>
+		<item name="600 particles">600</item>
+		<item name="800 particles">800</item>
+		<item name="1000 particles">1000</item>
+	</string-array>
+</resources>

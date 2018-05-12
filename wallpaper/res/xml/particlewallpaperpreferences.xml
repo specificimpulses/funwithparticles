@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:robobunny="http://robobunny.com"
+	android:key="preference_screen"
+	android:orientation="vertical"
+    android:id="@+id/prefscreen1"
+	>
+    <Preference android:key="keyUnlocked" android:defaultValue="false" android:selectable="true" android:enabled="true" android:title="Help us make it better!" android:shouldDisableView="true" android:summary="(Click to donate)"/>
+    <CheckBoxPreference android:enabled="true" android:summaryOn="showing last selected non-live wallpaper" android:summaryOff="enable to use your own background!" android:defaultValue="false" android:key="useWallpaper" android:title="Use System Wallpaper" android:selectable="true" />
+    <com.hmmmgames.particlewallpaper.SeekBarPreference android:key="seekParticles" android:title="Number of Particles" android:defaultValue="150" android:max="1000" robobunny:min="10" robobunny:unitsLeft="" robobunny:unitsRight="" />
+    <com.hmmmgames.particlewallpaper.SeekBarPreference android:key="seekPartSize" android:title="Particle Size" android:defaultValue="20" android:max="100" robobunny:min="1" robobunny:unitsLeft="" robobunny:unitsRight="%" />
+    <com.hmmmgames.particlewallpaper.SeekBarPreference android:key="seekOpacity" android:title="Transparency" android:defaultValue="50" android:max="95" robobunny:min="0" robobunny:unitsLeft="" robobunny:unitsRight="%" />
+    <com.hmmmgames.particlewallpaper.SeekBarPreference android:key="seekGravity" android:title="Gravity Strength" android:defaultValue="50" android:max="100" robobunny:min="0" robobunny:unitsLeft="" robobunny:unitsRight="%" />
+    <com.hmmmgames.particlewallpaper.SeekBarPreference android:key="seekAttract" android:title="Touch Strength" android:defaultValue="50" android:max="100" robobunny:min="0" robobunny:unitsLeft="" robobunny:unitsRight="%" />
+    
+</PreferenceScreen>
