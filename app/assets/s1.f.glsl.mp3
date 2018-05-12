@@ -1,0 +1,13 @@
+varying mediump vec4 fcolor;
+void main(void)
+{
+   gl_FragColor = fcolor;
+   mediump vec2 p = gl_PointCoord * 2.0 - vec2(1.0);
+   mediump float dotpp;
+   dotpp = dot(p,p);
+   if (dotpp > 0.4)
+     gl_FragColor = vec4(fcolor.rgb,1.4-dotpp);  
+     //gl_FragColor = vec4(1.0,0.5,0.5,1.0);
+   if (dotpp > 1.0)
+     discard; 
+}

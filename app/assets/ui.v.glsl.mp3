@@ -1,0 +1,11 @@
+attribute vec2 position;
+uniform float offset;
+varying vec2 texcoord;
+varying float fragoff;
+void main()
+{
+    gl_Position = vec4(position.x+offset*2.0,position.y, 0.0, 1.0);
+    texcoord = position * vec2(0.5) + vec2(0.5);
+    fragoff = offset;
+}
+

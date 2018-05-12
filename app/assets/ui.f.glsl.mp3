@@ -1,0 +1,125 @@
+uniform sampler2D textures[1];
+varying mediump vec2 texcoord;
+mediump vec4 colortmp0;
+varying mediump float button_color;
+uniform int button[7];
+uniform mediump vec2 screen;
+varying mediump float fragoff;
+void main()
+{
+    colortmp0 = texture2D(textures[0], texcoord);
+    mediump vec2 fc = gl_FragCoord.xy;
+    mediump vec2 sc = screen.xy;
+    mediump vec2 bmin;
+    mediump vec2 bmax;
+    mediump float ireal;
+    ireal = 0.0;
+    mediump float bh;
+    bh = sc.y/7.0;
+    mediump float bw;
+    bw = sc.x/4.5;
+    bmin.x = sc.x*(0.75+fragoff-0.75) + bw/14.0;
+    bmax.x = sc.x - bw/14.0; //sc.x*(.98+fragoff-0.75);
+    gl_FragColor.rgba = colortmp0.rgba;
+    //for (int i = 0; i < 7; i++)
+      if (button[0] == 1)
+        ireal = 1.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+      if (button[1] == 1)
+        ireal = 2.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+      if (button[2] == 1)
+        ireal = 3.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+      if (button[3] == 1)
+        ireal = 4.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+      if (button[4] == 1)
+        ireal = 5.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+      if (button[5] == 1)
+        ireal = 6.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+      if (button[6] == 1)
+        ireal = 7.0;
+        bmin.y = sc.y-bh*ireal+bh/6.0; //(sc.y-(ireal*bh))+bh/6.0;
+        bmax.y = bmin.y+bh-bh/2.5; //(bmin.y+bh)-bh/2.5;
+        if (fc.y > bmin.y && fc.y < bmax.y &&
+            fc.x > bmin.x && fc.x < bmax.x)
+          {
+          gl_FragColor = 1.0-colortmp0;
+          gl_FragColor.a = 0.8;
+          if(colortmp0.r == 1.0)
+            {
+            gl_FragColor.rgba = vec4(1.0,0.3,0.3,1.0);
+            }
+          }
+ 
+}
+
